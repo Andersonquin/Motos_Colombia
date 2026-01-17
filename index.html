@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Concesionario Motos Colombia</title>
+    <style>
+        body { font-family: sans-serif; background: #f4f4f4; text-align: center; }
+        .contenedor { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; }
+        .card { background: white; border-radius: 10px; padding: 20px; width: 200px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        h1 { color: #333; }
+        .precio { color: green; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>🏍️ Inventario de Motos</h1>
+    <div id="motos-lista" class="contenedor">
+        </div>
+
+    <script>
+        // Función para pedirle los datos a tu API de Python
+        async function cargarMotos() {
+            const respuesta = await fetch('http://127.0.0.1:8000/motos');
+            const datos = await respuesta.json();
+            const contenedor = document.getElementById('motos-lista');
+
+            datos.motos.forEach(moto => {
+                const card = `
+                    <div class="card">
+                        <h3>${moto.marca}</h3>
+                        <p>${moto.referencia}</p>
+                        <p class="precio">$${moto.precio.toLocaleString()}</p>
+                        <small>Color: ${moto.color}</small>
+                    </div>
+                `;
+                contenedor.innerHTML += card;
+            });
+        }
+        cargarMotos();
+    </script>
+</body>
+</html>
