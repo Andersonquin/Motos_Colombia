@@ -1,0 +1,93 @@
+/* estilos.css */
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: #f4f4f4; 
+    text-align: center; 
+    padding: 40px; 
+    margin: 0;
+}
+
+h1 { color: #2c3e50; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 2px; }
+
+.form-container { 
+    background: white; 
+    padding: 30px; 
+    border-radius: 15px; 
+    display: inline-block; 
+    margin-bottom: 40px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+    border: 1px solid #ddd;
+}
+
+.form-container h3 { margin-top: 0; color: #34495e; }
+
+input { 
+    margin: 10px; 
+    padding: 12px; 
+    border: 1px solid #dcdde1; 
+    border-radius: 8px; 
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button { 
+    background: #2c3e50; 
+    color: white; 
+    border: none; 
+    padding: 12px 30px; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover { 
+    background: #34495e; 
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.contenedor { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 25px; 
+    padding: 20px; 
+}
+
+.card { 
+    background: white; 
+    border-radius: 12px; 
+    padding: 25px; 
+    width: 240px; 
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08); 
+    border-top: 6px solid #2c3e50;
+    transition: transform 0.3s ease;
+}
+
+.card:hover { transform: scale(1.05); }
+
+.card h3 { margin: 0 0 10px 0; color: #2c3e50; font-size: 1.4em; }
+
+.cilindraje-tag {
+    background: #ecf0f1;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    color: #2c3e50;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.precio { 
+    color: #27ae60; 
+    font-weight: bold; 
+    font-size: 1.3em; 
+    display: block;
+    margin-top: 15px;
+}
+
+.color-text { font-style: italic; font-size: 0.85em; color: #95a5a6; }
